@@ -21,6 +21,9 @@ MAINTAINER Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 ENV GITEA_VERSION 1.1.0
 
+RUN apt-get update && \
+    apt-get install -y openssh-server
+
 ADD https://github.com/go-gitea/gitea/releases/download/v${GITEA_VERSION}/gitea-${GITEA_VERSION}-linux-arm-7 /gitea
 
 RUN chmod +x /gitea && \
@@ -32,6 +35,6 @@ ENV GITEA_CUSTOM /data/gitea
 
 VOLUME ["/etc/gitea", "/data/" ]
 
-EXPOSE 3000
+EXPOSE 22 3000
 
 ENTRYPOINT [ "/gitea" ]
