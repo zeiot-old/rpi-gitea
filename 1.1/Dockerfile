@@ -21,14 +21,22 @@ MAINTAINER Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 ENV GITEA_VERSION 1.1.0
 
+ENV USER=git
+ENV GROUP=git
+ENV UID=1000
+ENV GID=1000
+
 RUN apt-get update && \
-    apt-get install -y openssh-server
+    apt-get install -y openssh-server git curl
+
+RUN groupadd --gid ${GID} ${GROUP} \
+    && useradd --uid ${UID} --gid ${GID} --shell /bin/bash ${USER}
 
 ADD https://github.com/go-gitea/gitea/releases/download/v${GITEA_VERSION}/gitea-${GITEA_VERSION}-linux-arm-7 /gitea
 
 RUN chmod +x /gitea && \
     mkdir /data && \
-    mkdir /etc/gitea 
+    mkdir /etc/gitea
 
 ENV USER git
 ENV GITEA_CUSTOM /data/gitea
