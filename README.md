@@ -5,6 +5,15 @@
 
 Docker image of [Gitea][] to use on a [Raspberry PI][].
 
+# Usage
+
+Using Docker:
+
+    $ docker run --rm=true -p 9494:3000 -v /src/docker/gitea/etc:/etc/gitea -v /srv/docker/gitea/data:/data zeiot/rpi-gitea:1.1.0 web
+
+
+# Development
+
 Configure binfmt-support on the Docker host (works locally or remotely, i.e: using boot2docker):
 
     $ docker run --rm --privileged multiarch/qemu-user-static:register --reset
