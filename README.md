@@ -47,4 +47,4 @@ Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 
 [Raspberry PI]: https://www.raspberrypi.org/
-[Gitea]: https://gitea.org/
+[Gitea]: https://gitea.io
