@@ -16,7 +16,7 @@
 # AUTHOR:         Nicolas Lamirault <nicolas.lamirault@gmail.com>
 # DESCRIPTION:    zeiot/rpi-gitea
 
-FROM resin/armv7hf-debian:jessie
+FROM resin/armv7hf-debian:stretch
 MAINTAINER Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 ENV GITEA_VERSION 1.1.1
