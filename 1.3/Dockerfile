@@ -12,14 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# VERSION 1.1.1
+# VERSION 1.3.2
 # AUTHOR:         Nicolas Lamirault <nicolas.lamirault@gmail.com>
 # DESCRIPTION:    zeiot/rpi-gitea
 
 FROM resin/armv7hf-debian:stretch
 MAINTAINER Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
-ENV GITEA_VERSION 1.1.1
+ENV GITEA_VERSION 1.3.2
 
 ENV USER=git
 ENV GROUP=git
