@@ -19,7 +19,7 @@
 FROM resin/armv7hf-debian:stretch
 MAINTAINER Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
-ENV GITEA_VERSION 1.1.1
+ENV GITEA_VERSION 1.3.2
 
 ENV USER=git
 ENV GROUP=git
